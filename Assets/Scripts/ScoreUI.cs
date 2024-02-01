@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
@@ -16,6 +15,6 @@ public class ScoreUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = globalObj.score.ToString();
+        scoreText.text = String.Format("Score: {0}, Lives: {1}", globalObj.score.ToString(), globalObj.lives);
     }
 }

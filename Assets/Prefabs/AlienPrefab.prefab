@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: -8679921383154817045}
   - component: {fileID: -5754084199372789682}
   - component: {fileID: -7511558181221131132}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: prop_asteroid_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,12 +92,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7271272119908027718}
-  - component: {fileID: 1606541604344463875}
-  - component: {fileID: 7702438534624138478}
-  - component: {fileID: 8224890003740553020}
-  - component: {fileID: 4886305821748077554}
-  - component: {fileID: 5092268876359384182}
-  m_Layer: 0
+  - component: {fileID: 4325253223355813592}
+  - component: {fileID: 5087210703739022448}
+  - component: {fileID: 176650098248782476}
+  - component: {fileID: 2163319643331708444}
+  - component: {fileID: 7077036223987575883}
+  m_Layer: 7
   m_Name: AlienPrefab
   m_TagString: Asteroid
   m_Icon: {fileID: 0}
@@ -113,14 +113,14 @@ Transform:
   m_GameObject: {fileID: 2110766886289159564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -7.40099, y: -0.00024414062, z: 4.599997}
+  m_LocalScale: {x: 2.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: -8679921383154817045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1606541604344463875
+--- !u!33 &4325253223355813592
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +128,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110766886289159564}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7702438534624138478
+--- !u!23 &5087210703739022448
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +170,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8224890003740553020
+--- !u!65 &176650098248782476
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,7 +191,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4886305821748077554
+--- !u!54 &2163319643331708444
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,7 +201,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.005
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -213,12 +213,12 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5092268876359384182
+--- !u!114 &7077036223987575883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,8 +230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b16e98d407a24fd7bc2ec40b24bffea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 0
+  pointValue: 10
   prevAlien: {fileID: 0}
   nextAlien: {fileID: 0}
+  missile: {fileID: 7759186412133385308, guid: e1c026ee7304341458bd394ed88b55d2, type: 3}
+  bulletFrequency: 0.001
   deathExplosion: {fileID: 8668473715891789460, guid: 78a2df860dadb4cd6ba87264466dfddd, type: 3}
   deathKnell: {fileID: 8300000, guid: b6b98ce5757004468a0ad17d93e4a204, type: 3}

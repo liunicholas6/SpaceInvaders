@@ -7,7 +7,6 @@ public class Laser : MonoBehaviour
 {
     public Vector3 speed;
 
-
     // Use this for initialization
     void Start()
     {
@@ -41,15 +40,11 @@ public class Laser : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Collider collider = collision.collider;
-        if (collider.CompareTag("Asteroid"))
+        if (collider.CompareTag("Alien"))
         {
-            Alien roid = collider.gameObject.GetComponent<Alien>();
-            roid.Die();
-            gameObject.SetActive(false);
+            Alien alien = collider.gameObject.GetComponent<Alien>();
+            alien.Die();
         }
-        else
-        {
-            Debug.Log("Collided with " + collider.tag);
-        }
+        gameObject.SetActive(false);
     }
 }

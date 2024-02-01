@@ -1,17 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Alien : MonoBehaviour
 {
     public int pointValue;
     public Alien prevAlien;
     public Alien nextAlien;
+    public GameObject missile;
+    public float bulletFrequency;
 
     // Start is called before the first frame update
     void Start()
     {
         pointValue = 10;
+        bulletFrequency = 0.001f;
         // GetComponent<Rigidbody>().isKinematic = true;
     }
 
@@ -21,8 +26,12 @@ public class Alien : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
+        if (Random.value < bulletFrequency)
+        {
+            Instantiate(missile, gameObject.transform.position, Quaternion.identity);
+        }
     }
 
     public GameObject deathExplosion;
@@ -33,10 +42,17 @@ public class Alien : MonoBehaviour
             gameObject.transform.position);
         Instantiate(deathExplosion, gameObject.transform.position,
             Quaternion.AngleAxis(-90, Vector3.right));
-        GameObject obj = GameObject.Find("GlobalObject");
-        Global g = obj.GetComponent<Global>();
+        
+        Global g = GameObject.Find("GlobalObject").GetComponent<Global>();
         g.score += pointValue;
-        g.currAlien = nextAlien;
+        if (this == nextAlien)
+        {
+            g.SpawnAliens();
+        }
+        else
+        {
+            g.currAlien = nextAlien;
+        }
         Delete();
     }
 
@@ -47,7 +63,7 @@ public class Alien : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void setNext(Alien alien)
+    public void SetNext(Alien alien)
     {
         nextAlien = alien;
         alien.prevAlien = this;

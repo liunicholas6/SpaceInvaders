@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
+public class LaserBase : MonoBehaviour
 {
     public float speed;
     public float rotation;
     public GameObject laserPrefab;
+    public AudioClip deathKnell;
+    public GameObject deathExplosion;
 
     private Laser _laserInstance;
 
@@ -34,8 +36,8 @@ public class Ship : MonoBehaviour
     */
     void FixedUpdate()
     {
-        // force thruster
         GetComponent<Rigidbody>().velocity = new Vector3(speed * Input.GetAxisRaw("Horizontal"), 0, 0);
+        
         // if (Input.GetAxisRaw("Vertical") > 0)
         // {
         //     GetComponent<Rigidbody>().AddRelativeForce(forceVector);
@@ -55,4 +57,21 @@ public class Ship : MonoBehaviour
         //     //GetComponent<Rigidbody>().Rotate(0, -2.0f, 0.0f );
         // }
     }
+    
+    public void Die()
+    {
+        AudioSource.PlayClipAtPoint(deathKnell,
+            gameObject.transform.position);
+        Instantiate(deathExplosion, gameObject.transform.position,
+            Quaternion.AngleAxis(-90, Vector3.right));
+        GameObject obj = GameObject.Find("GlobalObject");
+        Global g = obj.GetComponent<Global>();
+        g.LoseLife();
+        
+        // g.score += pointValue;
+        // g.currAlien = nextAlien;
+        // Delete();
+    }
+    
+    
 }
