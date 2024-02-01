@@ -9,6 +9,9 @@ public class ShieldBlock : MonoBehaviour
     public float health = 1.0f;
 
     private Material _material;
+
+    private static readonly int ColorId = Shader.PropertyToID("_Color");
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +26,13 @@ public class ShieldBlock : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        health -= damagePerHit;
+        Damage();
+    }
 
-        _material.SetColor("_Color", Color.Lerp(Color.red, Color.white, health));
+    public void Damage()
+    {
+        health -= damagePerHit;
+        _material.SetColor(ColorId, Color.Lerp(Color.red, Color.white, health));
         if (health < 0f)
         {
             Destroy(gameObject);

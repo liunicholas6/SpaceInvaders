@@ -42,8 +42,12 @@ public class Laser : MonoBehaviour
         Collider collider = collision.collider;
         if (collider.CompareTag("Alien"))
         {
-            Alien alien = collider.gameObject.GetComponent<Alien>();
+            IKillable alien = collider.gameObject.GetComponent<IKillable>();
             alien.Die();
+        } else if (collider.CompareTag("Shield"))
+        {
+            ShieldBlock shieldBlock = collider.gameObject.GetComponent<ShieldBlock>();
+            shieldBlock.Damage();
         }
         gameObject.SetActive(false);
     }

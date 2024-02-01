@@ -631,9 +631,9 @@ GameObject:
   - component: {fileID: 979153865}
   - component: {fileID: 979153864}
   - component: {fileID: 979153863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: UFO
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -919,7 +919,7 @@ MonoBehaviour:
   currAlien: {fileID: 0}
   leftBound: -8
   rightBound: 8
-  lowerBound: -1
+  lowerBound: -1.5
   level: 0
 --- !u!1001 &1521671304
 PrefabInstance:

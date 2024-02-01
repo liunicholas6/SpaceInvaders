@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Alien : MonoBehaviour
+public class Alien : MonoBehaviour, IKillable
 {
     public int pointValue;
     public Alien prevAlien;

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1984732629860022912}
   m_Layer: 10
   m_Name: ShieldBlock
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,3 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1

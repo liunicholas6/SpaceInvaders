@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3154036705495422029}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &351240993816284943
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +135,7 @@ GameObject:
   - component: {fileID: 1552644016023435339}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &866289467245585830
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +255,7 @@ GameObject:
   - component: {fileID: 2189507589475405065}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,6 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &1205981690791329153
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +375,7 @@ GameObject:
   - component: {fileID: 1655870377005254237}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,6 +478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &1310047316857433326
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +495,7 @@ GameObject:
   - component: {fileID: 1583697354353456169}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -590,6 +598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &1500893412530930418
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +615,7 @@ GameObject:
   - component: {fileID: 5759581708783765770}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -708,6 +718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &2062953552689397942
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +735,7 @@ GameObject:
   - component: {fileID: 727945399594789389}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -826,6 +838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &2206957672656994361
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,7 +855,7 @@ GameObject:
   - component: {fileID: 7348293895369447029}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,6 +958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &3111184537320220175
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,7 +975,7 @@ GameObject:
   - component: {fileID: 3645629609746422504}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1062,6 +1078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &4263071168182375917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,7 +1095,7 @@ GameObject:
   - component: {fileID: 5175637933470663200}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1180,6 +1198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &4345306225965579778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1215,7 @@ GameObject:
   - component: {fileID: 8537533860506356150}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1298,6 +1318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &4494421080593368701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1335,7 @@ GameObject:
   - component: {fileID: 7779649311671359417}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1416,6 +1438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &4593072111710685273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1455,7 @@ GameObject:
   - component: {fileID: 8645513475412222918}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1534,6 +1558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &5167955838006747102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1575,7 @@ GameObject:
   - component: {fileID: 405891525937120511}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1652,6 +1678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &5743420220207065867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,7 +1695,7 @@ GameObject:
   - component: {fileID: 6324760688504002646}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1770,6 +1798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &6050704168545561671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1785,7 +1815,7 @@ GameObject:
   - component: {fileID: 4663777063888862511}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1888,6 +1918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &6292321047000843165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1935,7 @@ GameObject:
   - component: {fileID: 8325978993521856031}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2006,6 +2038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &6437831994310563817
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,7 +2055,7 @@ GameObject:
   - component: {fileID: 1956335000768244296}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2124,6 +2158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &6663436662945761125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,7 +2175,7 @@ GameObject:
   - component: {fileID: 3874360649340048736}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2242,6 +2278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &6828324442817351493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,7 +2348,7 @@ GameObject:
   - component: {fileID: 2920869915676551538}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2413,6 +2451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &7488969834177391982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,7 +2468,7 @@ GameObject:
   - component: {fileID: 5476063074885733982}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2531,6 +2571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
 --- !u!1 &9147509214035329872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,7 +2588,7 @@ GameObject:
   - component: {fileID: 7599724231867394851}
   m_Layer: 10
   m_Name: ShieldBlock(Clone)
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2649,3 +2691,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e1acec211894543af3fe5996afc529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerHit: 0.2
+  health: 1
