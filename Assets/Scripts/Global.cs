@@ -20,6 +20,7 @@ public class Global : MonoBehaviour
     public float lowerBound;
 
     public int level = 0;
+    public int sacrifices = 0;
     
     // Use this for initialization
     void Start()
@@ -39,7 +40,7 @@ public class Global : MonoBehaviour
             do
             {
                 alien.Move(verticalMove);
-                if (++alien.level > 5)
+                if (++alien.level > 7)
                 {
                     GameOver();
                 }

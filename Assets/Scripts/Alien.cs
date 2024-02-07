@@ -19,7 +19,6 @@ public class Alien : MonoBehaviour, IKillable
     {
         pointValue = 10;
         bulletFrequency = 0.001f;
-        // GetComponent<Rigidbody>().isKinematic = true;
     }
 
     public void Move(Vector3 v)
