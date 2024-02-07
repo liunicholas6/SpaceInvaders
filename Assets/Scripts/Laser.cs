@@ -44,6 +44,8 @@ public class Laser : MonoBehaviour
         {
             IKillable alien = collider.gameObject.GetComponent<IKillable>();
             alien.Die();
+            var contact = collision.contacts[0];
+            collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(contact.normal, contact.point, ForceMode.Impulse);
         } else if (collider.CompareTag("Shield"))
         {
             ShieldBlock shieldBlock = collider.gameObject.GetComponent<ShieldBlock>();

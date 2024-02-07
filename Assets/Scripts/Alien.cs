@@ -47,13 +47,16 @@ public class Alien : MonoBehaviour, IKillable
         g.score += pointValue;
         if (this == nextAlien)
         {
-            g.SpawnAliens();
+            g.ResetLevel();
         }
         else
         {
             g.currAlien = nextAlien;
         }
-        Delete();
+
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+        nextAlien.prevAlien = prevAlien;
+        prevAlien.nextAlien = nextAlien;
     }
 
     public void Delete()

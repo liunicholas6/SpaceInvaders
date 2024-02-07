@@ -7,11 +7,6 @@ public class Missile : MonoBehaviour
     public Vector3 speed;
     public GameObject explosionPrefab;
 
-    void Start()
-    {
-        
-    }
-
     private void Update()
     {
         if (Camera.main.WorldToScreenPoint(gameObject.transform.position).y < 0)
@@ -24,12 +19,7 @@ public class Missile : MonoBehaviour
     {
         transform.position += speed * Time.deltaTime;
     }
-
-    private void OnDestroy()
-    {
-        
-    }
-
+    
     void OnCollisionEnter(Collision collision)
     {
         Vector3 spawnPos = gameObject.transform.position;

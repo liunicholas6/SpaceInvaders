@@ -919,7 +919,7 @@ MonoBehaviour:
   currAlien: {fileID: 0}
   leftBound: -8
   rightBound: 8
-  lowerBound: -1.5
+  lowerBound: -2
   level: 0
 --- !u!1001 &1521671304
 PrefabInstance:
