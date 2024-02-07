@@ -40,7 +40,7 @@ public class Global : MonoBehaviour
             do
             {
                 alien.Move(verticalMove);
-                if (++alien.level > 7)
+                if (++alien.level + level > 7)
                 {
                     GameOver();
                 }
