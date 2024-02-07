@@ -54,8 +54,8 @@ public class AlienGen : MonoBehaviour
             SpawnAlien(x, level, 30, red);
             SpawnAlien(x, level + 1, 20, green);
             SpawnAlien(x, level + 2, 20, green);
-            SpawnAlien(x, level + 3, 20, blue);
-            SpawnAlien(x, level + 4, 20, blue);
+            SpawnAlien(x, level + 3, 10, blue);
+            SpawnAlien(x, level + 4, 10, blue);
         }
 
         currAlien.SetNext(dummyAlien);

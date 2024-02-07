@@ -18,7 +18,6 @@ public class Alien : MonoBehaviour, IKillable
     // Start is called before the first frame update
     void Start()
     {
-        pointValue = 10;
         bulletFrequency = 0.001f;
     }
 

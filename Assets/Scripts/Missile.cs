@@ -6,6 +6,7 @@ public class Missile : MonoBehaviour
 {
     public Vector3 speed;
     public GameObject explosionPrefab;
+    private bool collided = false;
 
     private void Update()
     {
@@ -29,10 +30,11 @@ public class Missile : MonoBehaviour
             LaserBase laserBase = collider.gameObject.GetComponent<LaserBase>();
             laserBase.Die();
         }
-        else
+        else if (collided == false)
         {
             Instantiate(explosionPrefab, spawnPos,
                         Quaternion.AngleAxis(-90, Vector3.right));
+            collided = true;
         }
         Destroy(gameObject);
     }
