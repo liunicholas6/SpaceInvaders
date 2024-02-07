@@ -5,12 +5,10 @@ using UnityEngine;
 public class LaserBase : MonoBehaviour
 {
     public float speed;
-    public float rotation;
     public GameObject laserPrefab;
     public AudioClip deathKnell;
     public GameObject deathExplosion;
 
-    private Laser _laserInstance;
     private Rigidbody _rigidbody;
 
     // Use this for initialization
@@ -18,16 +16,14 @@ public class LaserBase : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         speed = 2.0f;
-        
-        Vector3 spawnPos = gameObject.transform.position;
-        _laserInstance = Instantiate(laserPrefab).GetComponent<Laser>();
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && !Laser.activeLaser)
         {
-            _laserInstance.Fire(gameObject.transform.position);
+            var laser = Instantiate(laserPrefab);
+            laser.transform.position = transform.position;
         }
     }
 

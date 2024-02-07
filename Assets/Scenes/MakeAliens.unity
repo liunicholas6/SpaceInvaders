@@ -345,6 +345,9 @@ MonoBehaviour:
   downUnit: {x: 0, y: 0, z: 0}
   leftBound: 0
   rightBound: 0
+  red: {fileID: 2100000, guid: d871b377d48374c9087dca2ca065fcfb, type: 2}
+  green: {fileID: 2100000, guid: 22aee23bfd0424bc6b30917b957960c5, type: 2}
+  blue: {fileID: 2100000, guid: 3881f2cc1a983432780089262b25b433, type: 2}
 --- !u!4 &1514596277
 Transform:
   m_ObjectHideFlags: 0

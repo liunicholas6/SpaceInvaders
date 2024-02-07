@@ -11,6 +11,7 @@ public class Alien : MonoBehaviour, IKillable
     public Alien nextAlien;
     public GameObject missile;
     public float bulletFrequency;
+    public bool isAlive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,10 @@ public class Alien : MonoBehaviour, IKillable
     public AudioClip deathKnell;
     public void Die()
     {
+        if (!isAlive)
+        {
+            return;
+        }
         AudioSource.PlayClipAtPoint(deathKnell,
             gameObject.transform.position);
         Instantiate(deathExplosion, gameObject.transform.position,
@@ -57,6 +62,8 @@ public class Alien : MonoBehaviour, IKillable
         gameObject.GetComponent<Rigidbody>().useGravity = true;
         nextAlien.prevAlien = prevAlien;
         prevAlien.nextAlien = nextAlien;
+        gameObject.layer = LayerMask.NameToLayer("DeadWeight");
+        isAlive = false;
     }
 
     public void Delete()

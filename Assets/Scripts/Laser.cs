@@ -1,26 +1,17 @@
-using System;
 using UnityEngine;
-using System.Collections;
-using UnityEngine.Serialization;
 
 public class Laser : MonoBehaviour
 {
+    public static bool activeLaser = false;
+    
     public Vector3 speed;
+    public bool isActive = true;
 
     // Use this for initialization
     void Start()
     {
-        gameObject.SetActive(false);
-    }
-
-    public void Fire(Vector3 spawnPos)
-    {
-        if (gameObject.activeSelf)
-        {
-            return;
-        }
-        gameObject.transform.position = spawnPos;
-        gameObject.SetActive(true);
+        gameObject.GetComponent<Rigidbody>().velocity = speed;
+        activeLaser = true;
     }
 
     private void Update()
@@ -28,29 +19,39 @@ public class Laser : MonoBehaviour
         float height = Screen.height;
         if (Camera.main.WorldToScreenPoint(gameObject.transform.position).y > height)
         {
-            gameObject.SetActive(false);
+            activeLaser = false;
+            Destroy(gameObject);
         }
-    }
-
-    private void FixedUpdate()
-    {
-        transform.position += speed * Time.deltaTime;
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        Collider collider = collision.collider;
-        if (collider.CompareTag("Alien"))
+        if (isActive)
         {
-            IKillable alien = collider.gameObject.GetComponent<IKillable>();
-            alien.Die();
-            var contact = collision.contacts[0];
-            collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(contact.normal, contact.point, ForceMode.Impulse);
-        } else if (collider.CompareTag("Shield"))
-        {
-            ShieldBlock shieldBlock = collider.gameObject.GetComponent<ShieldBlock>();
-            shieldBlock.Damage();
+            Collider collider = collision.collider;
+            if (collider.CompareTag("Alien"))
+            {
+                IKillable alien = collider.gameObject.GetComponent<IKillable>();
+                alien.Die();
+                var contact = collision.contacts[0];
+                collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(contact.normal, contact.point, ForceMode.Impulse);
+            }
+            else if (collider.CompareTag("Shield"))
+            {
+                ShieldBlock shieldBlock = collider.gameObject.GetComponent<ShieldBlock>();
+                shieldBlock.Damage();
+            }
+    
+            activeLaser = false;
+            isActive = false;
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+            gameObject.layer = LayerMask.NameToLayer("DeadWeight");
         }
-        gameObject.SetActive(false);
+        else
+        {
+            
+        }
+        
     }
 }

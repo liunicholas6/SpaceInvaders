@@ -23,11 +23,10 @@ public class Missile : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Vector3 spawnPos = gameObject.transform.position;
-        spawnPos.z += 1f;
+        spawnPos.z += 0.2f;
         Collider collider = collision.collider;
         if (collider.CompareTag("Player"))
         {
-            Debug.Log("Player hit");
             LaserBase laserBase = collider.gameObject.GetComponent<LaserBase>();
             laserBase.Die();
         }
