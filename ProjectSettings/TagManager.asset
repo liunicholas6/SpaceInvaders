@@ -7,11 +7,12 @@ TagManager:
   - Bullet
   - Alien
   - Shield
+  - Asteroid
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - DeadWeight
   - Water
   - UI
   - LaserBase

@@ -16,8 +16,8 @@ public class Laser : MonoBehaviour
 
     private void Update()
     {
-        float height = Screen.height;
-        if (Camera.main.WorldToScreenPoint(gameObject.transform.position).y > height)
+        float y = Camera.main.WorldToViewportPoint(transform.position).y;
+        if (y < -0.1 || y > 1.1)
         {
             activeLaser = false;
             Destroy(gameObject);
@@ -34,7 +34,7 @@ public class Laser : MonoBehaviour
                 IKillable alien = collider.gameObject.GetComponent<IKillable>();
                 alien.Die();
                 var contact = collision.contacts[0];
-                collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(contact.normal, contact.point, ForceMode.Impulse);
+                collider.gameObject.GetComponent<Rigidbody>().AddForceAtPosition(contact.normal * -5f, contact.point, ForceMode.Impulse);
             }
             else if (collider.CompareTag("Shield"))
             {
@@ -47,10 +47,6 @@ public class Laser : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().useGravity = true;
 
             gameObject.layer = LayerMask.NameToLayer("DeadWeight");
-        }
-        else
-        {
-            
         }
         
     }

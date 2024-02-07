@@ -22,7 +22,6 @@ public class NewBehaviourScript : MonoBehaviour
         while (true)
         {
             float t = Random.value;
-            Debug.Log(t);
             MakeHole(t);
             yield return new WaitForSeconds(spawnTime);
         }
@@ -45,7 +44,5 @@ public class NewBehaviourScript : MonoBehaviour
         var rightPos = rightFloor.localPosition;
         rightPos.x = t + holeSize + 0.5f * rightScale.x;
         rightFloor.localPosition = rightPos;
-        
-
     }
 }
