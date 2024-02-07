@@ -21,14 +21,21 @@ public class Global : MonoBehaviour
 
     public int level = 0;
     public int sacrifices = 0;
-    
+
+    public GameObject ufo;
+    public float ufoSpawnRate;
+    public Vector3 ufoVelocity;
+    private Rigidbody _ufoRigidbody;
+
     // Use this for initialization
     void Start()
     {
+        _ufoRigidbody = ufo.GetComponent<Rigidbody>();
         score = 0;
         lives = 3;
         horizontalMove = new Vector3(0.1f, 0, 0);
         ResetLevel();
+        StartCoroutine(SpawnUfo());
     }
     private void FixedUpdate()
     {
@@ -40,7 +47,7 @@ public class Global : MonoBehaviour
             do
             {
                 alien.Move(verticalMove);
-                if (++alien.level + level > 7)
+                if (++alien.level + level > 8)
                 {
                     GameOver();
                 }
@@ -52,6 +59,19 @@ public class Global : MonoBehaviour
         else
         {
             currAlien = currAlien.nextAlien;
+        }
+    }
+    
+    IEnumerator SpawnUfo()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(ufoSpawnRate);
+            ufo.SetActive(true);
+            var pos = ufo.transform.position;
+            pos.x = leftBound;
+            ufo.transform.position = pos;
+            _ufoRigidbody.velocity = ufoVelocity;
         }
     }
 

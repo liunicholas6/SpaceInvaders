@@ -40,6 +40,11 @@ public class LaserBase : MonoBehaviour
     void FixedUpdate()
     {
         _rigidbody.velocity = new Vector3(speed * Input.GetAxisRaw("Horizontal"), 0, 0);
+        var position = transform.position;
+        GameObject obj = GameObject.Find("GlobalObject");
+        Global g = obj.GetComponent<Global>();
+        position.x = Mathf.Clamp(position.x, g.leftBound, g.rightBound);
+        transform.position = position;
     }
     
     public void Die()

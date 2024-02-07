@@ -3,6 +3,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
     public static bool activeLaser = false;
+    public static int ufoScorePtr = 0;
     
     public Vector3 speed;
     public bool isActive = true;
@@ -12,6 +13,7 @@ public class Laser : MonoBehaviour
     {
         gameObject.GetComponent<Rigidbody>().velocity = speed;
         activeLaser = true;
+        ufoScorePtr = (ufoScorePtr + 1) % 15;
     }
 
     private void Update()
