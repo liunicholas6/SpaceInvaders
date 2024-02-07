@@ -18,9 +18,8 @@ public class Global : MonoBehaviour
     public float leftBound;
     public float rightBound;
     public float lowerBound;
-    
+
     public int level = 0;
-    public int descendCount = 0;
     
     // Use this for initialization
     void Start()
@@ -36,15 +35,14 @@ public class Global : MonoBehaviour
         float x = currAlien.gameObject.transform.position.x;
         if (x < leftBound || x > rightBound)
         {
-            descendCount++;
-            if (descendCount == 5)
-            {
-                GameOver();
-            }
             var alien = currAlien;
             do
             {
                 alien.Move(verticalMove);
+                if (++alien.level > 5)
+                {
+                    GameOver();
+                }
                 alien = alien.nextAlien;
             } while (alien != currAlien);
             
@@ -62,7 +60,6 @@ public class Global : MonoBehaviour
         swarm.transform.position += verticalMove * level;
         currAlien = swarm.transform.GetChild(0).GetComponent<Alien>();
         level = (level + 1) % 3;
-        descendCount = level;
     }
 
     public void LoseLife()

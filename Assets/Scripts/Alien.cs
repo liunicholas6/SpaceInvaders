@@ -12,6 +12,7 @@ public class Alien : MonoBehaviour, IKillable
     public GameObject missile;
     public float bulletFrequency;
     public bool isAlive = true;
+    public int level;
 
     // Start is called before the first frame update
     void Start()
