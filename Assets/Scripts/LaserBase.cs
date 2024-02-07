@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class LaserBase : MonoBehaviour
 {
     public float speed;
-    public GameObject laserPrefab;
+    public GameObject laser;
+    public GameObject bombLaser;
     public AudioClip deathKnell;
     public GameObject deathExplosion;
 
@@ -19,8 +21,13 @@ public class LaserBase : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && !Laser.activeLaser)
         {
-            var laser = Instantiate(laserPrefab);
-            laser.transform.position = transform.position;
+            var obj = Instantiate(laser);
+            obj.transform.position = transform.position;
+        }
+        if (Input.GetButtonDown("Fire2") && !Laser.activeLaser)
+        {
+            var obj = Instantiate(bombLaser);
+            obj.transform.position = transform.position;
         }
     }
 

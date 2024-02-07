@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    public Vector3 speed;
-    public bool isActive = true;
+    public float explosionRadius;
 
-    // Use this for initialization
+    public float lifetime;
+
+    public float startTime;
+
+    // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = speed;
+        startTime = Time.time;
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        float y = Camera.main.WorldToViewportPoint(transform.position).y;
-        if (y < -0.1 || y > 1.1)
+        
+    }
+
+    void FixedUpdate()
+    {
+        float t = Time.time - startTime;
+        if (t > lifetime)
         {
             Destroy(gameObject);
+            return;
         }
+        float radius = t/lifetime * explosionRadius;
+        transform.localScale = new Vector3(radius, radius, radius);
     }
-    
-    
 }
