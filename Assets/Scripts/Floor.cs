@@ -9,11 +9,17 @@ public class NewBehaviourScript : MonoBehaviour
     
     private Transform leftFloor;
     private Transform rightFloor;
+
+    private Transform hole;
     // Start is called before the first frame update
     void Start()
     {
         leftFloor = transform.GetChild(0);
         rightFloor = transform.GetChild(1);
+        hole = transform.GetChild(2);
+        var holeScale = hole.localScale;
+        holeScale.x = 2 * holeSize;
+        hole.localScale = holeScale;
         StartCoroutine(HoleRoutine());
     }
 
@@ -29,6 +35,10 @@ public class NewBehaviourScript : MonoBehaviour
 
     void MakeHole(float t)
     {
+        var holePos = hole.localPosition;
+        holePos.x = t;
+        hole.localPosition = holePos;
+        
         var leftScale = leftFloor.localScale;
         leftScale.x = t - holeSize;
         leftFloor.localScale = leftScale;
