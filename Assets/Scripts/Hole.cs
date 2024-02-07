@@ -9,8 +9,10 @@ public class Hole : MonoBehaviour
     {
         if (collider.CompareTag("Alien"))
         {
-            Global g = GameObject.Find("GlobalObject").GetComponent<Global>();
-            g.sacrifices++;
+            Alien alien = collider.gameObject.GetComponent<Alien>();
+            if (alien.sacrificed) return;
+            GameObject.Find("GlobalObject").GetComponent<Global>().sacrifices++;
+            alien.sacrificed = true;
         }
     }
 }

@@ -10,11 +10,13 @@ public class LaserBase : MonoBehaviour
     public GameObject deathExplosion;
 
     private Rigidbody _rigidbody;
+    private Global _g;
 
     // Use this for initialization
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _g = GameObject.Find("GlobalObject").GetComponent<Global>();
     }
 
     void Update()
@@ -24,8 +26,9 @@ public class LaserBase : MonoBehaviour
             var obj = Instantiate(laser);
             obj.transform.position = transform.position;
         }
-        if (Input.GetButtonDown("Fire2") && !Laser.activeLaser)
+        if (Input.GetButtonDown("Fire2") && _g.sacrifices >= 5)
         {
+            _g.sacrifices -= 5;
             var obj = Instantiate(bombLaser);
             obj.transform.position = transform.position;
         }

@@ -23,7 +23,6 @@ public class Missile : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Vector3 spawnPos = gameObject.transform.position;
-        spawnPos.z += 0.2f;
         Collider collider = collision.collider;
         if (collider.CompareTag("Player"))
         {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1873771173735567668}
   - component: {fileID: 5796070659028052785}
   - component: {fileID: 3005293003400884131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e6d31712c3c4bd4a096b21219e0c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 6
+  explosionRadius: 5
+  explosionForce: 10
   lifetime: 1
   startTime: 0
