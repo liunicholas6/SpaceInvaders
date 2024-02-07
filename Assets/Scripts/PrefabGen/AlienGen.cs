@@ -13,6 +13,10 @@ public class AlienGen : MonoBehaviour
 
     public float leftBound;
     public float rightBound;
+
+    public Material red;
+    public Material green;
+    public Material blue;
     
     // Use this for initialization
     void Start()
@@ -28,11 +32,13 @@ public class AlienGen : MonoBehaviour
         SpawnAliens(0);
     }
 
-    void SpawnAlien(float x, float y)
+    void SpawnAlien(float x, float y, int points, Material mat)
     {
         var nextAlien = Instantiate(alien,
             topLeft + x * rightUnit + y * downUnit,
             Quaternion.identity).GetComponent<Alien>();
+        nextAlien.pointValue = points;
+        nextAlien.gameObject.GetComponent<Renderer>().material = mat;
         currAlien.SetNext(nextAlien);
         currAlien = nextAlien;
     }
@@ -42,17 +48,13 @@ public class AlienGen : MonoBehaviour
         var dummyAlien = Instantiate(alien).GetComponent<Alien>();
         currAlien = dummyAlien;
         
-        for (int i = 0; i < 5; i++)
+        for (int x = 0; x < 5; x++)
         {
-            var y = startY + i;
-            SpawnAlien(0, y);
-            currAlien.pointValue = 30;
-            SpawnAlien(1, y);
-            currAlien.pointValue = 20;
-            SpawnAlien( 2, y);
-            currAlien.pointValue = 20;
-            SpawnAlien(3, y);
-            SpawnAlien(4, y);
+            SpawnAlien(x, startY, 30, red);
+            SpawnAlien(x, startY + 1, 20, green);
+            SpawnAlien(x, startY + 2, 20, green);
+            SpawnAlien(x, startY + 3, 20, blue);
+            SpawnAlien(x, startY + 4, 20, blue);
         }
 
         currAlien.SetNext(dummyAlien);
